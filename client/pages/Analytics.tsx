@@ -1,11 +1,10 @@
-import Header from "@/components/layout/Header";
+
 import { Card } from "@/components/ui/card";
 import { BarChart3 } from "lucide-react";
 
 export default function Analytics() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div>
           <h1 className="text-3xl font-bold text-foreground">Analytics</h1>

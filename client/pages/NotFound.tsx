@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { AlertCircle, ArrowLeft, Home } from "lucide-react";
-import Header from "@/components/layout/Header";
+
 
 const NotFound = () => {
   const location = useLocation();
@@ -17,7 +17,6 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       <main className="mx-auto flex max-w-7xl flex-col items-center justify-center px-4 py-20 sm:px-6 lg:px-8">
         <div className="text-center">
           <AlertCircle className="mx-auto h-12 w-12 text-destructive" />
