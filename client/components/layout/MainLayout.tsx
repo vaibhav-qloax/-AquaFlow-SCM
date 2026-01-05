@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import {
   Home,
   LayoutDashboard,
@@ -75,7 +75,7 @@ export default function MainLayout() {
           <SidebarMenu>
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
-                <a href="/">
+                <Link to="/">
                   <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold">
                     W
                   </div>
@@ -83,7 +83,7 @@ export default function MainLayout() {
                     <span className="truncate font-semibold">AquaFlow SCM</span>
                     <span className="truncate text-xs">Supply Chain Management</span>
                   </div>
-                </a>
+                </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
@@ -97,10 +97,10 @@ export default function MainLayout() {
                 {navigationItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild>
-                      <a href={item.url}>
+                      <Link to={item.url}>
                         <item.icon className="h-4 w-4" />
                         <span>{item.title}</span>
-                      </a>
+                      </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -114,18 +114,18 @@ export default function MainLayout() {
               <SidebarMenu>
                 <SidebarMenuItem>
                   <SidebarMenuButton asChild>
-                    <a href="/settings">
+                    <Link to="/settings">
                       <Settings className="h-4 w-4" />
                       <span>Settings</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
                   <SidebarMenuButton asChild>
-                    <a href="/notifications">
+                    <Link to="/notifications">
                       <Bell className="h-4 w-4" />
                       <span>Notifications</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </SidebarMenu>
